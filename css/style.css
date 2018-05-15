@@ -32,7 +32,7 @@ html,body
 	background-image: url("../img/chess.jpg");
 	background-size: 100% 100%;
 	text-align: center;
-	line-height: 100%;
+	line-height: 100px;
 
 	
 }
@@ -78,6 +78,10 @@ html,body
 	font-family: 'Maven Pro', sans-serif;
 }
 
+p.bottom {
+	padding-bottom: 25px;
+}
+
 
 
 .namePlate {
@@ -88,6 +92,8 @@ html,body
 	margin: auto;
 	font-family: 'Ubuntu', sans-serif;
 	text-shadow: 5px 4px 4px black;
+	animation: 1s ease-out 0s 1 slideInFromLeft;
+	
 
 }
 
@@ -127,9 +133,13 @@ html,body
 	margin: auto;
 	margin-bottom: 25px;
 	background-color: black;
-	box-shadow: 2px 2px 2px white;
+	border: 1px solid #F4FFBD;
 }
 
+.portImg {
+	width: 380px;
+	height: 280px;
+}
 
 
 .contactContain {
@@ -159,6 +169,7 @@ html,body
 	color: #F4FFBD;
 }
 
+
 ul {
 	list-style-type: none;
 	display: flex;
@@ -169,6 +180,7 @@ li {
 	margin-left:5%;
 	color: white;
 	font-family: 'Ubuntu', sans-serif;
+	animation: 1s ease-out 0s 1 slideInFromRight;
 }
 
 .shadow-gray {
@@ -191,6 +203,29 @@ p {
 
 p.head-Text {
 	margin: 50px;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -236,6 +271,7 @@ p.head-Text {
 	background-color: #95A8A7;
 	border-top:.5px solid black;
 	margin: 0;
+	min-height: 100%;
 }
 
 .portPanel {
@@ -245,6 +281,7 @@ p.head-Text {
 	background-color: #4A5E5D;
 	border-top:.5px solid black;
 	margin: 0;
+	min-height: 100%;
 }
 
 .contactPanel {
@@ -255,6 +292,7 @@ p.head-Text {
 	width: auto;
 	background-color: #95A8A7;
 	margin: 0;
+	min-height: 100%;
 }
 
 .item {
